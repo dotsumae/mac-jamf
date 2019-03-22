@@ -59,8 +59,8 @@ preferencesToReset=(
 ########## main process ##########
 
 
-
 # delete Safari preference files
+  defaults delete com.apple.Safari
   "/bin/echo" "Deleting Safari preference files to reset to system default..."
   for safariPref in ${preferencesToReset[@]}; do
     if [[ -e "$safariPref" ]]; then
